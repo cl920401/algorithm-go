@@ -1,5 +1,6 @@
 package sort
 
+//QuickSort: 快速排序
 func QuickSort(arr []int) {
 	head, tail := 0, len(arr)-1
 	if head >= tail {
