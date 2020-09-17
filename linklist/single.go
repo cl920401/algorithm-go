@@ -90,3 +90,67 @@ func (v *SingleLinkList) Search(val interface{}) int {
 func (v *SingleLinkList) isNull() bool {
 	return v.len == 0
 }
+
+type ListNode struct {
+	next *ListNode
+	rand *ListNode
+	val  int
+}
+
+//CombineLink: 合并两个有序链表
+func CombineLink(root1 *ListNode, root2 *ListNode) *ListNode {
+	if root1 == nil {
+		return root2
+	}
+	if root2 == nil {
+		return root1
+	}
+	var root *ListNode
+	var next1 *ListNode
+	var next2 *ListNode
+	if root2.val > root1.val {
+		root = root1
+		next1 = root1
+		next2 = root2
+	} else {
+		root = root2
+		next1 = root2
+		next2 = root1
+	}
+
+	for next1.next != nil && next2 != nil {
+		if next1.val > next2.val {
+			return nil
+		} else if next1.val <= next2.val && next1.next.val >= next2.val {
+			next2, next1.next, next2.next = next2.next, next2, next1.next
+		} else {
+			next1 = next1.next
+		}
+	}
+	if next1.next == nil {
+		next1.next = next2
+	}
+	return root
+}
+
+//链表拷贝
+func CopyLinkList(root *ListNode) *ListNode {
+	next := root
+	nodeMap := make(map[*ListNode]*ListNode)
+	for next != nil {
+		nodeMap[next] = &ListNode{
+			next: next.next,
+			rand: next.rand,
+			val:  next.val,
+		}
+		next = next.next
+	}
+	next = root
+	for next != nil {
+		tmp := nodeMap[next]
+		tmp.next = nodeMap[tmp.next]
+		tmp.rand = nodeMap[tmp.rand]
+		next = next.next
+	}
+	return nodeMap[root]
+}
