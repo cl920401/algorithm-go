@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ffe1e64d-ea29-4bb2-94e5-e2c8c3be7f7e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/array/heap.go" beforeDir="false" afterPath="$PROJECT_DIR$/array/heap.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/tree.go" beforeDir="false" afterPath="$PROJECT_DIR$/tree/tree.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/tree_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tree/tree_test.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../go1.15.1" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1mMv3tDLlKoW2ONUek5oGUbUHzQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Go Test.Test_levelOrderBottom in algorithm-go/tree">
+    <configuration name="Test_levelOrderBottom in algorithm-go/tree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algorithm-go" />
+      <working_directory value="$PROJECT_DIR$/tree" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algorithm-go/tree" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_levelOrderBottom\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_levelOrderBottom/Test_levelOrderBottom in algorithm-go/tree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algorithm-go" />
+      <working_directory value="$PROJECT_DIR$/tree" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algorithm-go/tree" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_levelOrderBottom\E$/^\QTest_levelOrderBottom\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.Test_levelOrderBottom in algorithm-go/tree" />
+        <item itemvalue="Go Test.Test_levelOrderBottom/Test_levelOrderBottom in algorithm-go/tree" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/tree/tree_test.go</url>
+          <line>59</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/tree/tree_test.go</url>
+          <line>35</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

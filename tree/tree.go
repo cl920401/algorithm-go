@@ -1,6 +1,8 @@
 package tree
 
-import "container/list"
+import (
+	"container/list"
+)
 
 type TreeNode struct {
 	Val   int
@@ -47,4 +49,39 @@ func levelOrderBottom(root *TreeNode) [][]int {
 		}
 	}
 	return nodes
+}
+
+func perOrder(root *TreeNode) []int {
+	if root == nil {
+		return nil
+	}
+	nums := make([]int, 0)
+	stack := list.New()
+	for root != nil {
+		if root.Left != nil {
+			stack.PushBack(root)
+			root = root.Left
+			continue
+		}
+		nums = append(nums, root.Val)
+		if root.Right != nil {
+			root = root.Right
+			continue
+		}
+		if stack.Len() <= 0 {
+			break
+		}
+		for {
+			root = stack.Remove(stack.Back()).(*TreeNode)
+			if root == nil {
+				break
+			}
+			nums = append(nums, root.Val)
+			if root.Right != nil {
+				root = root.Right
+				break
+			}
+		}
+	}
+	return nums
 }

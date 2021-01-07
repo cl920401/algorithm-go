@@ -25,10 +25,8 @@ func (this *IntHeap) Push(n interface{}) {
 
 func (this *IntHeap) Pop() interface{} {
 	old := *this
-	n := len(old)
-	x := old[n-1]
-	*this = old[0 : n-1]
-	return x
+	*this = old[0 : len(*this)-1]
+	return old[len(*this)-1]
 }
 
 type KthLargest struct {
