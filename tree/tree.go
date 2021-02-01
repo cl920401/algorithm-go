@@ -2,6 +2,7 @@ package tree
 
 import (
 	"container/list"
+	"fmt"
 	"strconv"
 	"strings"
 )
@@ -251,3 +252,38 @@ func (this *Codec) deserialize(data string) *TreeNode {
  * data := ser.serialize(root);
  * ans := deser.deserialize(data);
  */
+
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+func isBalanced(root *TreeNode) bool {
+	if root == nil {
+		return true
+	}
+
+	max, min := GetDeep(root, 0)
+	return max-min < 2
+
+}
+
+func GetDeep(root *TreeNode, deep int) (int, int) {
+	if root == nil {
+		return deep, deep
+	}
+	lMax, lMin := GetDeep(root.Left, deep+1)
+	rMax, rMin := GetDeep(root.Right, deep+1)
+	fmt.Println(root.Val, ":max, min")
+	if lMax < rMax {
+		lMax = rMax
+	}
+	if lMin > rMin {
+		lMin = rMin
+	}
+	fmt.Println(lMax, lMin)
+	return lMax, lMin
+}

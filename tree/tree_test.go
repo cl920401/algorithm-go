@@ -61,3 +61,33 @@ func Test_verifyPostorder(t *testing.T) {
 		})
 	}
 }
+
+func Test_isBalanced(t *testing.T) {
+	code := Constructor()
+	tree := code.deserialize("[1,2,2,3,3,3,3,4,4,4,4,4,4,null,null,5,5]")
+	str := code.serialize(tree)
+	fmt.Print(str)
+	type args struct {
+		root *TreeNode
+	}
+	tests := []struct {
+		name string
+		args args
+		want bool
+	}{
+		{
+			name: "Test_isBalanced",
+			args: args{
+				root: tree,
+			},
+			want: false,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := isBalanced(tt.args.root); got != tt.want {
+				t.Errorf("isBalanced() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
